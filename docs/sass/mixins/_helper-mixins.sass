@@ -1,0 +1,25 @@
+@mixin group
+  &:before, &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  *zoom: 1
+
+@mixin marketChorusFont
+  font-family: proxima-nova, sans-serif, "helvetica neue", helvetica, arial
+  -webkit-font-smoothing: antialiased
+
+@mixin truncate($width: 250px)
+  max-width: $width
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  display: block
+
+@mixin inlineBlock
+  display: -moz-inline-stack
+  display: inline-block
+  vertical-align: top
+  zoom: 1
+  *display: inline

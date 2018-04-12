@@ -1,0 +1,85 @@
+@-webkit-keyframes rotate
+	from 
+		-webkit-transform: rotate(0deg)
+	to 
+		-webkit-transform: rotate(360deg)
+@-moz-keyframes rotate
+	from 
+		-moz-transform: rotate(0deg)
+	to 
+		-moz-transform: rotate(360deg)
+@-o-keyframes rotate
+	from 
+		-o-transform: rotate(0deg)
+	to 
+		-o-transform: rotate(360deg)
+@-ms-keyframes rotate
+	from 
+		-ms-transform: rotate(0deg)
+	to 
+		-ms-transform: rotate(360deg)
+
+.loading
+	position: absolute
+	display: block
+	left: 50%
+	top: 50%
+	visibility: visible !important
+	&.overrideLocationTop
+		top: 58px
+	.indicator
+		display: block
+		overflow: hidden
+		text-indent: -2000em
+		margin: 0 auto
+	&.spinner
+		width: 100px
+		height: 58px
+		margin: -29px 0 0 -50px
+		.indicator
+			background: image-url("loading/loading.gif") center 0 no-repeat
+			width: 35px
+			height: 35px
+			.cssanimations & 
+				background: image-url("loading/loading_black.svg") no-repeat
+				background-size: 100% !important
+				width: 35px
+				height: 28px
+				-webkit-animation-name: rotate
+				-webkit-animation-duration: .9s
+				-webkit-animation-iteration-count: infinite
+				-webkit-animation-timing-function: linear
+				-moz-animation-name: rotate
+				-moz-animation-duration: .9s
+				-moz-animation-iteration-count: infinite
+				-moz-animation-timing-function: linear
+				-o-animation-name: rotate
+				-o-animation-duration: .9s
+				-o-animation-iteration-count: infinite
+				-o-animation-timing-function: linear
+				-ms-animation-name: rotate
+				-ms-animation-duration: .9s
+				-ms-animation-iteration-count: infinite
+				-ms-animation-timing-function: linear
+	.msg
+		display: block !important
+		color: #555 !important
+		text-align: center !important
+		margin: 5px 0 0 0 !important
+		font-size: 14px !important
+		font-weight: normal !important
+
+	&.white
+		.indicator
+			background: image-url("loading/loading_white.gif") center 0 no-repeat
+			.cssanimations &
+				background: image-url("loading/loading_white.svg") no-repeat
+		.msg
+			color: #fff !important
+	&.dark
+		.indicator
+			background: uimage-url("loading/loading_dark.gif") center 0 no-repeat
+			.cssanimations &
+				background: image-url("loading/loading_white.svg") no-repeat
+		.msg
+			color: #aaa !important
